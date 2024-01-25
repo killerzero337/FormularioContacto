@@ -4,6 +4,8 @@
 #####################################################
 *.sketch
 *.fig
+mond.rmskin
+Rainmeter-4.5.18.exe
 .vscode
 # Avoid accidental XD upload if you convert the design file
 ###############################################

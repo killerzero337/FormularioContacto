@@ -1,4 +1,4 @@
-//declaracion de algunas variables
+//declaracion de algunas variables globales
 var nombre = document.querySelector(".nombre");
 var contraseña = document.querySelector(".campoContraseña");
 var email = document.querySelector(".email");
@@ -85,6 +85,8 @@ function generarSegundoSelect() {
   }
 }
 
+
+//boton para cambiar la visibilidad de la contraseña
 function mostrarContraseña() {
   console.log("contra visible");
   var mostrarPass = document.getElementById("mostrarPass");
@@ -136,6 +138,8 @@ function limpiarCampos() {
   botonEnvio.disabled = true;
 }
 
+
+// Comprueba si los campos estan llenos para activar el boton
 function comprobarCampos() {
   let camposRellenados = 0;
 
