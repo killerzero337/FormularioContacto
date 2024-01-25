@@ -31,7 +31,7 @@ body {
     border: solid 1px black;
     background-color: var(--White);
     min-width: auto;
-    min-height: 100vh;
+    min-height: 90vh;
     border-radius: 20px;
 
 }
@@ -94,7 +94,7 @@ li {
 
 .formulario>div {
     display: block;
-    width: 14.6vw;
+    width: 25vh;
 }
 
 .boton {
