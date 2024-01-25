@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Los iconos han sido obtenidos en FontAwesome -->
+  <script src="https://kit.fontawesome.com/ed412e24c0.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/document-svgrepo-com.svg">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario de contacto| Comisiones WildBruntta</title>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Sign-up form start -->
+  <div class="tarjeta">
+
+    <div class="registro">
+      <div class="informacion">
+        <h1>¡Mantente actualizado!</h1>
+
+        <p>Si deseas puedes mantener contacto con nosotros:</p>
+
+        <ul>
+          <li>Obtén Arte personalizado</li>
+          <li>Experiencia y aprendizaje personalizada </li>
+          <li>¡Y mucho mas!</li>
+        </ul>
+
+      </div>
+
+      <form action="enviarDatos" method="post" class="formulario">
+
+        <div>
+          <label for="telf">Numero tlf:</label>
+          <input name="tel" type="tel" pattern="[0-9]{3}" maxlength="9" class="nombre" required>
+          <p class="mensajeError"></p>
+        </div>
+
+        <div>
+          <label for="email">Correo electronico:</label>
+          <input type="email" maxlength="60" class="email" required autocomplete="off">
+          <p class="mensajeError"></p>
+        </div>
+
+        <div>
+          <label for="pass">Contraseña:</label>
+          <input type="password" class="campoContraseña" required><button type="button" onclick="mostrarContraseña()"
+            id="mostrarPass"><i class="fa-regular fa-eye"></i></button>
+          <p class="mensajeError"></p>
+        </div>
+
+        <div>
+          <label for="tipoComision">Tipo de comision:</label>
+
+          <select name="tiposComision" id="selecionarComision" onchange="generarPrimerSelect()">
+            <option value="" disabled selected>Elija comisión...</option>
+            <option value="sketch">Sketch</option>
+            <option value="line">LineaArt</option>
+            <option value="full">Full color</option>
+          </select>
+
+
+        </div>
+
+
+
+      </form>
+      <div class="boton">
+        <button type="button" id="botonEnvio" class="botonEnviar" onclick="enviarFormulario()" disabled>Enviar
+          Fomulario</button>
+        <button type="button" id="botonEnvio" onclick="limpiarCampos()">Limpiar formulario</button>
+        <button type="button" id="botonEnvio" onclick="imprimirFormulario()">Imprimir Formulario</button>
+        <button type="button" id="botonEnvio" onclick="comprobarCampos()">Comprobar Fomulario</button>
+      </div>
+    </div>
+    <div class="img"></div>
+  </div>
+
+
+  <div class="mensajeDeConfirmar">
+    Gracias por subscribirse.
+  </div>
+
+  <div class="attribution" style="text-align: center;">
+    Diseño tomado de <a
+      href="https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv"
+      target="_self">Frontend Mentor</a>.
+    Código hecho por: <a href="https://github.com/killerzero337">José Manuel Garrido González</a>.
+  </div>
+</body>
+
+</html>

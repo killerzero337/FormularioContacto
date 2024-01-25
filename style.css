@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-content: center center;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--Charcoal-Grey);
+}
+
+.tarjeta {
+    display: flex;
+    padding: 3%;
+    border: solid 1px black;
+    background-color: var(--White);
+    min-width: auto;
+    min-height: 100vh;
+    border-radius: 20px;
+
+}
+
+.img {
+    background-position: center;
+    background-image: url('assets/images/illustration-sign-up-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 80vh;
+    max-width: 100%;
+    aspect-ratio: 1;
+    min-width: 30vh;
+    margin: 0% 0% 0% 0;
+    transition: 1s;
+}
+
+.img:hover {
+    opacity: 80%;
+    transition: 1s;
+    
+}
+
+.registro {
+    padding: 5%;
+}
+
+.registro .informacion>h1 {
+    font-size: 50px;
+    margin: 0% 0% 5% -1%;
+}
+
+.informacion>p {
+    margin: -1%;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+
+    background: url('assets/images/icon-success.svg') no-repeat left;
+    height: 20px;
+    background-size: contain;
+    padding-left: 30px;
+    margin: 5% 0% 2% 2%;
+}
+
+.formulario {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    row-gap: 20%;
+}
+
+.formulario>div {
+    display: block;
+    width: 14.6vw;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    height: 36px;
+    width: 160px;
+    border: solid 2px gray;
+    border-radius: 5px;
+    transition: 0.5s;
+    outline: none;
+    transition: 0.5;
+}
+
+select:hover {
+    border-color: var(--Tomato);
+    transition: 0.5s;
+}
+
+input {
+    height: 36px;
+    width: 160px;
+    border: solid 2px gray;
+    border-radius: 5px;
+    transition: width .35s ease-in-out;
+    outline: none;
+    padding: 5px;
+}
+
+.enfocado {
+    border: 2px solid;
+    width: 188px;
+    border-color: var(--Tomato);
+    transition: width .55s ease-in-out;
+    outline: none;
+}
+
+#mostrarPass {
+    border: gray solid 2px;
+    outline: none;
+    color: var(--White);
+    background-color: var(--Charcoal-Grey);
+    padding: 8px;
+    border-radius: 20%;
+    transition: 0.5s;
+}
+
+#mostrarPass:hover {
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: var(--Tomato);
+}
+
+#botonEnvio {
+    color: var(--White);
+    background: var(--Dark-Slate-Grey);
+    margin: 10% 1% 1% 1%;
+    min-width: 100px;
+
+    min-height: 30px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s;
+    padding: 15px;
+}
+
+#botonEnvio:hover {
+    background-color: var(--Tomato);
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.mensajeDeConfirmar {
+    opacity: 80%;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    font-size: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vh;
+    min-height: 50vh;
+    background-color: var(--Tomato);
+    padding: 20px;
+    z-index: 2;
+    animation: entradaMensaje 0.5s ease-in-out;
+    display: none;
+}
+
+
+.error {
+    border-color: red;
+}
+
+.error select {
+    border-color: red;
+}
+
+.mensajeError {
+    color: red;
+}
+
+#botonEnvio:disabled {
+    opacity: 85%;
+    cursor:not-allowed;
+}
+
+@keyframes entradaMensaje {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+
+    }
+
+    to {
+        opacity: 80%;
+        transform: translate(-50%, -50%);
+    }
+}
